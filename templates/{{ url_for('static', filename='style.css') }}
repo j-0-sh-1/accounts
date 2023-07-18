@@ -1,0 +1,162 @@
+/* style.css */
+
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a nice background color and font for the whole page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Center align the container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Add some styles to the header */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the form elements */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Style the select dropdown */
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Style the income and expense buttons */
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[name="transaction_type"][value="Income"] {
+  background-color: #007bff;
+}
+
+button[name="transaction_type"][value="Expense"] {
+  background-color: #dc3545;
+}
+
+/* Style the table for view transactions page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #343a40;
+}
+
+th, td:nth-child(1) {
+  width: 10%;
+}
+
+th, td:nth-child(5) {
+  width: 20%;
+}
+
+/* Center align content in view_transactions.html */
+.view-container {
+  text-align: center;
+}
+
+/* Center align the "View Transactions" button */
+.center {
+  text-align: center;
+  margin-top: 20px; /* Add some top margin for better spacing */
+}
+
+/* Style the "View Transactions" button */
+.view-button {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Style the "Edit" link in view_transactions.html */
+.view-container a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.view-container a:hover {
+  background-color: #444;
+}
+
+/* Center align content in edit_transaction.html */
+.edit-container {
+  text-align: center;
+}
+
+/* Style the "Save Changes" button in edit_transaction.html */
+.edit-container button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #28a745;
+  cursor: pointer;
+}
+
+/* Style the "Cancel" button in edit_transaction.html */
+.edit-container button.cancel {
+  background-color: #dc3545;
+}

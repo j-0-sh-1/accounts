@@ -1,0 +1,35 @@
+<!-- edit_transaction.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Transaction</h1>
+        <form method="post">
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <!-- Add the same options as in add_transaction.html -->
+            </select>
+
+            <label for="particulars">Particulars:</label>
+            <input type="text" name="particulars" id="particulars" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" required>
+
+            <label for="transaction_type">Transaction Type:</label>
+            <button type="submit" name="transaction_type" value="Income">Income</button>
+            <button type="submit" name="transaction_type" value="Expense">Expense</button>
+
+            <label for="date_time">Date:</label>
+            <input type="datetime-local" name="date_time" id="date_time" value="{{ transaction['date_time'] }}" required>
+
+            <button type="submit" name="submit">Save Changes</button>
+            <a class="cancel-button" href="{{ url_for('view_transactions') }}">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

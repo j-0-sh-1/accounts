@@ -1,0 +1,179 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+button,
+input[type="datetime-local"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+a.view-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #2196f3;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.view-button:hover {
+  background-color: #0d8bf2;
+}
+
+a.add-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #f44336;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.add-button:hover {
+  background-color: #f21b0c;
+}
+
+a.export-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #9c27b0;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.export-button:hover {
+  background-color: #7a1d8c;
+}
+
+.view-transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-transactions table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.view-transactions th, .view-transactions td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.view-transactions th {
+  background-color: #333;
+  color: #fff;
+}
+
+.view-transactions td {
+  text-align: center;
+}
+
+.balance {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+#current-balance {
+  font-size: 24px;
+}
+
+/* Center alignment for buttons */
+button[type="submit"],
+a.view-button,
+a.add-button,
+a.export-button {
+  margin: 10px auto;
+  display: block;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="number"],
+.dark-mode select,
+.dark-mode button,
+.dark-mode input[type="datetime-local"] {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode button[type="submit"],
+.dark-mode a.view-button,
+.dark-mode a.add-button,
+.dark-mode a.export-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.dark-mode a.view-button:hover,
+.dark-mode a.add-button:hover,
+.dark-mode a.export-button:hover {
+  background-color: #0d8bf2;
+}
+
+/* Center alignment for the "View Transactions" button on the main page */
+#view-transactions-link {
+  margin: 10px auto;
+  display: block;
+}
+
+/* Additional styles for the View Transactions page */
+.view-button-wrapper {
+  text-align: center;
+}

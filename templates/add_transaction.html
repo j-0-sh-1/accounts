@@ -1,0 +1,60 @@
+<!-- add_transaction.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Transaction</h1>
+        <form id="transaction-form" method="post">
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="Groceries">Groceries</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Education">Education</option>
+                <option value="Internet">Internet</option>
+                <option value="Office">Office</option>
+                <option value="Toiletries">Toiletries</option>
+                <option value="Travel">Travel</option>
+                <option value="Gas">Gas</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Income">Income</option>
+            </select>
+
+            <label for="particulars">Particulars:</label>
+            <input type="text" name="particulars" id="particulars" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" required>
+
+            <!-- Hidden input field to hold the transaction type -->
+            <input type="hidden" name="transaction_type" id="transaction-type">
+
+            <label for="date_time">Date:</label>
+            <input type="datetime-local" name="date_time" id="date_time" value="{{ current_datetime }}" required>
+
+            <button type="button" onclick="setTransactionType('Income')">Income</button>
+            <button type="button" onclick="setTransactionType('Expense')">Expense</button>
+
+            <button type="submit" name="submit">Submit</button>
+            <a class="view-button" href="{{ url_for('view_transactions') }}">View Transactions</a>
+        </form>
+
+        <div class="balance">
+            <h3>Current Balance:</h3>
+            <span id="current-balance">{{ current_balance }}</span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to set the transaction type value and submit the form
+        function setTransactionType(type) {
+            const transactionTypeField = document.getElementById("transaction-type");
+            transactionTypeField.value = type;
+            document.getElementById("transaction-form").submit();
+        }
+    </script>
+</body>
+</html>
